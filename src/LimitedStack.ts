@@ -9,3 +9,11 @@ class UnlimitedStack<T> implements Stack<T> {
     return 0;
   }
 }
+
+/*Что было плохо:
+1)
+*/
+
+/*Что стало лучше:
+1)
+*/

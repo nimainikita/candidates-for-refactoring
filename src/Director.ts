@@ -15,3 +15,11 @@ class Director {
     this.calendar.addEvent(event);
   }
 }
+
+/*Что было плохо:
+1)
+*/
+
+/*Что стало лучше:
+1)
+*/

@@ -7,3 +7,12 @@ class Some {
     return this.requestToCreateComment(comment);
   }
 }
+
+
+/*Что было плохо:
+1)
+*/
+
+/*Что стало лучше:
+1)
+*/

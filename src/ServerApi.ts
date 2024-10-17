@@ -10,3 +10,14 @@ class ServerApi {
   public requestAuth(url: string, credentials: TCredentials) {
     return this.fetch('GET', url, credentials);
   }
+
+}
+
+/*Что было плохо:
+1)
+*/
+
+/*Что стало лучше:
+1)
+*/
+  
