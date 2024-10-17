@@ -1,8 +1,20 @@
-if (
-  user.age >= 18 &&
-  user.age <= 65 &&
-  user.employmentStatus === 'employed' &&
-  user.criminalRecord === false
-) {
+function isEligibleForLoan(user) {
+  return (
+    user.age >= 18 &&
+    user.age <= 65 &&
+    user.employmentStatus === 'employed' &&
+    user.criminalRecord === false
+  );
+}
+
+if (isEligibleForLoan(user)) {
   approveLoan();
 }
+/*Что было плохо:
+1) Длинное условие в if ухудшало читаемость кода и делало его трудным для понимания
+2) Логика проверки находилась прямо в if, что делало её сложной для повторного использования и тестирования
+*/
+
+/*Что стало лучше:
+1) Вынос проверки в функцию улучшил читаемость кода, логику проверки можно легко изменять в одном месте
+*/

@@ -1,11 +1,13 @@
 class SomeClass2 {
-  private unusedVariable: number;
-
-  constructor() {
-    console.log('Constructor is unnecessary if not initializing anything');
-  }
-
   public someMethod(): void {
     console.log('This method performs a useful action');
   }
 }
+
+/*Что было плохо:
+1) Неиспользуемая переменная и конструктор который бесполезен
+*/
+
+/*Что стало лучше:
+1) Убрали ненужное
+*/

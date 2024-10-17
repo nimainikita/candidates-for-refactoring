@@ -1,3 +1,19 @@
+interface UserParams {
+  name: string;
+  age: number;
+  address: string;
+  phoneNumber: string;
+  email: string;
+  role: string;
+  isActive?: boolean;
+  isVerified?: boolean;
+  isPremium?: boolean;
+  lastLogin?: Date;
+  registrationDate?: Date;
+  profilePicture?: string;
+  bio?: string;
+  interests?: string[];
+}
 
 class User {
   private name: string;
@@ -15,22 +31,22 @@ class User {
   private bio: string;
   private interests: string[];
 
-  constructor(
-    name: string,
-    age: number,
-    address: string,
-    phoneNumber: string,
-    email: string,
-    role: string,
-    isActive: boolean,
-    isVerified: boolean,
-    isPremium: boolean,
-    lastLogin: Date,
-    registrationDate: Date,
-    profilePicture: string,
-    bio: string,
-    interests: string[]
-  ) {
+  constructor({
+    name,
+    age,
+    address,
+    phoneNumber,
+    email,
+    role,
+    isActive = false,
+    isVerified = false,
+    isPremium = false,
+    lastLogin = new Date(),
+    registrationDate = new Date(),
+    profilePicture = '',
+    bio = '',
+    interests = []
+  }: UserParams) {
     this.name = name;
     this.age = age;
     this.address = address;
@@ -49,3 +65,13 @@ class User {
 
   // ... (other methods)
 }
+
+/*Что было плохо:
+1) Конструктор принимает слишком много параметров, 
+что делает его использование неудобным и увеличивает вероятность ошибок при создании экземпляра
+2) 
+*/
+
+/*Что стало лучше:
+1) Теперь вместо передачи каждого свойства отдельно в конструктор передается один объект с параметрами
+*/
